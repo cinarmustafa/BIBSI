@@ -143,16 +143,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Aralik.cs" />
+    <Compile Include="Models\Basvuru.cs" />
+    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\Fotograf.cs" />
+    <Compile Include="Models\Ilan.cs" />
+    <Compile Include="Models\IlanIsDeneyimi.cs" />
     <Compile Include="Models\Ilce.cs" />
     <Compile Include="Models\IsArayan.cs" />
+    <Compile Include="Models\IsDeneyimi.cs" />
     <Compile Include="Models\IsVeren.cs" />
     <Compile Include="Models\MaasAraligi.cs" />
     <Compile Include="Models\Mahalle.cs" />
+    <Compile Include="Models\Meslek.cs" />
+    <Compile Include="Models\Pozisyon.cs" />
     <Compile Include="Models\Sehir.cs" />
+    <Compile Include="Models\Sektor.cs" />
     <Compile Include="Models\Sirket.cs" />
+    <Compile Include="Models\SureModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
