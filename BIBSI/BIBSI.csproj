@@ -143,6 +143,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Fotograf.cs" />
+    <Compile Include="Models\Ilce.cs" />
+    <Compile Include="Models\IsArayan.cs" />
+    <Compile Include="Models\IsVeren.cs" />
+    <Compile Include="Models\MaasAraligi.cs" />
+    <Compile Include="Models\Mahalle.cs" />
+    <Compile Include="Models\Sehir.cs" />
+    <Compile Include="Models\Sirket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,7 +177,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\img\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
