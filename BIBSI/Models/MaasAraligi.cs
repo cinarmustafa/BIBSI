@@ -5,17 +5,12 @@ using System.Web;
 
 namespace BIBSI.Models
 {
-    public class MaasAraligi
+    public class MaasAraligi : Aralik<decimal>
     {
-        public decimal Minimum { get; set; }
-        public decimal Maksimum { get; set; }
-
         public MaasAraligi() { }
 
-        public MaasAraligi(decimal min, decimal maks)
-        {
-            Minimum = min;
-            Maksimum = maks;
-        }
+        public MaasAraligi(decimal netMaas) : base(netMaas) { }
+
+        public MaasAraligi(decimal min, decimal maks) : base(min, maks) { }
     }
 }

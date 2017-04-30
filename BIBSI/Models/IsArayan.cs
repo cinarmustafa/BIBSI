@@ -20,10 +20,12 @@ namespace BIBSI.Models
         public string Adres { get; set; }
         public int FotografId { get; set; }
         public MaasAraligi MaasAraligi { get; set; }
+        public Enums.EgitimDurumu EgitimDurumu { get; set; }
 
         public virtual Sehir Sehir { get; set; }
         public virtual Ilce Ilce { get; set; }
         public virtual Mahalle Mahalle { get; set; }
         public virtual Fotograf Fotograf { get; set; }
+        public virtual ICollection<IsDeneyimi> IsDeneyimleri { get; set; }
     }
 }
