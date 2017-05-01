@@ -10,10 +10,7 @@ namespace BIBSI.Models
         public int Id { get; set; }
         public string Ad { get; set; }
 
-        public Sehir()
-        {
-
-        }
+        public Sehir() { }
 
         public Sehir(string ad)
         {
