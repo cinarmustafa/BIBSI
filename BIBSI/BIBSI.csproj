@@ -139,7 +139,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BasvuruController.cs" />
+    <Compile Include="Controllers\FotografController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IlanController.cs" />
+    <Compile Include="Controllers\IlceController.cs" />
+    <Compile Include="Controllers\IsArayanController.cs" />
+    <Compile Include="Controllers\IsDeneyimiController.cs" />
+    <Compile Include="Controllers\IsVerenController.cs" />
+    <Compile Include="Controllers\MahalleController.cs" />
+    <Compile Include="Controllers\MeslekController.cs" />
+    <Compile Include="Controllers\PozisyonController.cs" />
+    <Compile Include="Controllers\SehirController.cs" />
+    <Compile Include="Controllers\SektorController.cs" />
+    <Compile Include="Controllers\SirketController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +199,19 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\img\" />
+    <Folder Include="Views\Basvuru\" />
+    <Folder Include="Views\Fotograf\" />
+    <Folder Include="Views\Ilan\" />
+    <Folder Include="Views\Ilce\" />
+    <Folder Include="Views\IsArayan\" />
+    <Folder Include="Views\IsDeneyimi\" />
+    <Folder Include="Views\IsVeren\" />
+    <Folder Include="Views\Mahalle\" />
+    <Folder Include="Views\Meslek\" />
+    <Folder Include="Views\Pozisyon\" />
+    <Folder Include="Views\Sehir\" />
+    <Folder Include="Views\Sektor\" />
+    <Folder Include="Views\Sirket\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

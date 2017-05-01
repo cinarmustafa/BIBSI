@@ -22,14 +22,14 @@ namespace BIBSI.Models
         {
             Ad = ad;
             Unvan = unvan;
-            IsVerenId = IsVerenId;
+            IsVerenId = isVerenId;
         }
 
         public Sirket(string ad, string unvan, int isVerenId, int logoId)
         {
             Ad = ad;
             Unvan = unvan;
-            IsVerenId = IsVerenId;
+            IsVerenId = isVerenId;
             FotografId = logoId;
         }
 
