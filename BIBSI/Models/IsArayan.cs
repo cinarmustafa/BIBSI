@@ -11,6 +11,7 @@ namespace BIBSI.Models
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string EvTelefonu { get; set; }
+        public string CepTelefonu { get; set; }
         public Enums.CinsiyetTur Cinsiyet { get; set; }
         public Enums.AskerlikDurumuTur AskerlikDurumu { get; set; }
         public DateTime DogumTarihi { get; set; }
