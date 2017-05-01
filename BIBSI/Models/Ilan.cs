@@ -41,5 +41,6 @@ namespace BIBSI.Models
         public virtual Sektor Sektor { get; set; }
         public virtual Pozisyon Pozisyon { get; set; }
         public virtual Meslek Meslek { get; set; }
+        public virtual ICollection<Fotograf> Fotograflar { get; set; }
     }
 }
