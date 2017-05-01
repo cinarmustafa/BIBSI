@@ -18,7 +18,7 @@ namespace BIBSI.Models
         public Enums.AskerlikDurumuTur AskerlikDurumu { get; set; }
         public bool YolMasrafi { get; set; }
         public bool SSKMasrafi { get; set; }
-        public bool CalismaBicimi { get; set; }
+        public Enums.CalismaBicimi CalismaBicimi { get; set; }
         public Enums.EgitimDurumu EgitimDurumu { get; set; }
         public MaasAraligi MaasAraligi { get; set; }
         public IlanIsDeneyimi Deneyim { get; set; }
