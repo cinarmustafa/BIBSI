@@ -6,3 +6,11 @@
 
 <h2>Tüm İş İlanları</h2>
 
+@section scripts{
+    <script>
+        $("#menu form ul li").each(function () {
+            $(this).removeClass("current_page_item");
+        });
+        $("#menu form ul li:nth-child(3)").addClass("current_page_item");
+    </script>
+    }
