@@ -13,5 +13,15 @@ namespace BIBSI.Controllers
         {
             return View();
         }
+
+        public ActionResult TumIlanlar()
+        {
+            return View();
+        }
+
+        public ActionResult Iletisim()
+        {
+            return View();
+        }
     }
 }

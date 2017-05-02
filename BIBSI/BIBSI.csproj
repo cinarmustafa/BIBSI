@@ -127,10 +127,20 @@
   <ItemGroup>
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\mobile.css" />
     <Content Include="Content\css\normalize.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\bg01.png" />
+    <Content Include="Content\images\pic01.jpg" />
+    <Content Include="Content\images\pic02.jpg" />
+    <Content Include="Content\images\pic03.jpg" />
+    <Content Include="Content\images\pic04.jpg" />
+    <Content Include="Content\images\pic05.jpg" />
+    <Content Include="Content\images\pic06.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery-3.2.1.min.js" />
     <Content Include="Content\js\script.js" />
@@ -184,11 +194,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Views\IsVeren\Index.cshtml" />
+    <Content Include="Views\Home\TumIlanlar.cshtml" />
+    <Content Include="Views\Home\Iletisim.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -198,14 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\" />
     <Folder Include="Views\Basvuru\" />
     <Folder Include="Views\Fotograf\" />
     <Folder Include="Views\Ilan\" />
     <Folder Include="Views\Ilce\" />
     <Folder Include="Views\IsArayan\" />
     <Folder Include="Views\IsDeneyimi\" />
-    <Folder Include="Views\IsVeren\" />
     <Folder Include="Views\Mahalle\" />
     <Folder Include="Views\Meslek\" />
     <Folder Include="Views\Pozisyon\" />

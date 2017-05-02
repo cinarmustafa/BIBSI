@@ -17,8 +17,7 @@ namespace BIBSI.Controllers
         // GET: IsVeren
         public ActionResult Index()
         {
-            var isVerenler = db.IsVerenler.Include(i => i.Fotograf).Include(i => i.Ilce).Include(i => i.Mahalle).Include(i => i.Sehir);
-            return View(isVerenler.ToList());
+            return View();
         }
 
         // GET: IsVeren/Details/5
