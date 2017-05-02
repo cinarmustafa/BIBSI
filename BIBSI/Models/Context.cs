@@ -33,6 +33,11 @@ namespace BIBSI.Models
             modelBuilder.Entity<Sektor>().ToTable("Sektorler", "dbo");
             modelBuilder.Entity<Sirket>().ToTable("Sirketler", "dbo");
             modelBuilder.Entity<IsDeneyimi>().ToTable("IsDeneyimleri", "dbo");
+            modelBuilder.Entity<Kullanici>().ToTable("Kullanicilar", "dbo");
+
+            //modelBuilder.Entity<Sehir>().HasMany(i => i.Ilceler).WithRequired().WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Ilce>().HasMany(i => i.Mahalleler).WithRequired().WillCascadeOnDelete(false);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             base.OnModelCreating(modelBuilder);
         }
 
@@ -49,5 +54,6 @@ namespace BIBSI.Models
         public DbSet<Sektor> Sektorler { get; set; }
         public DbSet<Sirket> Sirketler { get; set; }
         public DbSet<IsDeneyimi> IsDeneyimleri { get; set; }
+        public DbSet<Kullanici> Kullanicilar { get; set; }
     }
 }

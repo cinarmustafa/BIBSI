@@ -18,6 +18,5 @@ namespace BIBSI.Models
         }
 
         public virtual ICollection<Ilce> Ilceler { get; set; }
-        public virtual ICollection<Mahalle> Mahalleler { get; set; }
     }
 }
