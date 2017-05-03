@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="http://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet" />
+    <link href="~/Content/css/fonts.css" rel="stylesheet" />
+    <link href="~/Content/css/normalize.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/mobile.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <img class="logo" src="~/Content/images/logo.png" alt="logo" />
+                    <h6 class="slogan">EN KOLAY İŞ BULMA SİTESİ</h6>
+                </div>
+                <ul id="account">
+                    <li><a href="/Hesap/YeniUyelik">Üye Ol</a></li>
+                    <li><a href="/Hesap/Uyegirisi">Üye Girişi</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="menu-wrapper">
+            <div id="menu" class="container">
+                <form action="" method="post">
+                    <ul>
+                        <li class="current_page_item"><a href="/">Anasayfa</a></li>
+                        <li><a href="/IsVeren">İş Veren</a></li>
+                        <li><a href="/Home/TumIlanlar">Tüm İş İlanları</a></li>
+                        <li><a href="/Home/Iletisim">İletişim</a></li>
+                        <li>
+                            <input type="text" id="tbIsArama" placeholder="Pozisyon, firma adı, sektör" />
+                            <select id="cmbxSehirler">
+                                <option>Ankara</option>
+                                <option>İstanbul</option>
+                                <option>Adana</option>
+                                <option>Trabzon</option>
+                                <option>Ankara</option>
+                                <option>Ankara</option>
+                            </select>
+                            <input id="btnIsAra" type="submit" value="İş Ara" />
+                        </li>
+
+                    </ul>
+                </form>
+            </div>
+            <!-- end #menu -->
+        </div>
+        <div id="page" class="container">
+            <div id="isveren-content">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div id="portfolio-wrapper">
+            <div id="portfolio" class="container">
+                <div id="column1">
+                    <div class="title">
+                        <h2>Nasıl CV Hazırlanır?</h2>
+                    </div>
+                    <a href="https://cvlogin.com/tr/?gclid=CJWHq76u09MCFQIcGwodxXcFJw" target="_blank" class="image image-full"><img src="~/Content/images/CV.jpg" alt="" /></a>
+                    <p>İş arayanlar için CV hazırlanması elzem bir durumdur. İyi hazırlanmış bir CV iyi bir iş olanağı demektir. Aşşağıdaki buton ile size yardımcı olacak bir internet sayfasını ziyaret edebilirsiniz.</p>
+                    <a href="https://cvlogin.com/tr/?gclid=CJWHq76u09MCFQIcGwodxXcFJw" target="_blank" class="icon icon-plus-sign button">Devam</a>
+                </div>
+                <div id="column2">
+                    <div class="title">
+                        <h2>Ofis Hayatında Öneriler</h2>
+                    </div>
+                    <a href="http://www.karel.com.tr/blog/mutlu-bir-hayati-icin-verimli-calismanin-9-yolu" target="_blank" class="image image-full"><img src="~/Content/images/picofis.jpg" alt="" /></a>
+                    <p>Eğer gün sonunda planladığınızdan daha az iş bitirdiğinizi düşünüyorsanız,gün sonunda daha çok işi bitirebilmek için dikkat edilmesi gereken basit kurallar elbette var.</p>
+                    <a href="http://www.karel.com.tr/blog/mutlu-bir-hayati-icin-verimli-calismanin-9-yolu" target="_blank" class="icon icon-plus-sign button">Devam</a>
+                </div>
+                <div id="column3">
+                    <div class="title">
+                        <h2>Staj Defteri Nasıl hazırlanır</h2>
+                    </div>
+                    <a href="http://arelkariyer.arel.edu.tr/is-ve-staj/staj/staj-dosyasi-icin-sss" target="_blank" class="image image-full"><img src="~/Content/images/picbook.jpg" alt="" /></a>
+                    <p>Staj defteri staj yapılan kurumda kime imzalatılmalıdır? Staj defterini imzalayacak olan yetkili izne ayrılmışsa yerine başka bir yetkilinin imza atması mümkün müdür?Hepsinin cevabı...</p>
+                    <a href="http://arelkariyer.arel.edu.tr/is-ve-staj/staj/staj-dosyasi-icin-sss" target="_blank" class="icon icon-plus-sign button">Devam</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-wrapper">
+            <div id="footer" class="container">
+                <div id="box1">
+                    <div class="title">
+                        <h2>MENÜ</h2>
+                    </div>
+                    <ul class="style1">
+                        <li><a href="#">Ana Sayfa</a></li>
+                        <li><a href="#">Üye Ol</a></li>
+                        <li><a href="#">İş Veren</a></li>
+                        <li><a href="#">Tüm İş ilanları</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Yardım</a></li>
+                    </ul>
+                </div>
+                <div class="hakkimizda">
+                    <p>BİBSİ bir YISİER AŞ. iştirakidir.Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu Olarak 28/03/2017 itibari ile faaliyette bulunmak üzere, Türkiye İş Kurumu tarafından 28.03.2014 tarih ve 118598 sayılı karar uyarınca 170 nolu belge ile faaliyet göstermektedir. 4904 sayılı kanun uyarınca iş arayanlardan ücret alınması yasaktır.</p>
+                </div>
+                <div id="box3">
+                    <div class="title">
+                        <h2>Bizi Takip Edin</h2>
+                    </div>
+                    <ul class="contact">
+                        <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+                        <li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+                        <li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+                        <li><a href="#" class="icon icon-tumblr"><span>Tumblr</span></a></li>
+                        <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/script.js"></script>
+    @RenderSection("scripts", false)
+
+</body>
+</html>

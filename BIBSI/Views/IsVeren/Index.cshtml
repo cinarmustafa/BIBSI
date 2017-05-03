@@ -1,16 +1,15 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>İşverenler</h2>
+<h2>İş Veren</h2>
 
 @section scripts{
-    <script>
-        $("#menu form ul li").each(function () {
-            $(this).removeClass("current_page_item");
-        });
-        $("#menu form ul li:nth-child(2)").addClass("current_page_item");
-    </script>
+   <script>
+       menuSec(2);
+</script>
+
 }
+

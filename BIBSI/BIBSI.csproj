@@ -135,12 +135,14 @@
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\bg01.png" />
+    <Content Include="Content\images\CV.jpg" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\pic01.jpg" />
     <Content Include="Content\images\pic02.jpg" />
-    <Content Include="Content\images\pic03.jpg" />
-    <Content Include="Content\images\pic04.jpg" />
     <Content Include="Content\images\pic05.jpg" />
     <Content Include="Content\images\pic06.jpg" />
+    <Content Include="Content\images\picbook.jpg" />
+    <Content Include="Content\images\picofis.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery-3.2.1.min.js" />
     <Content Include="Content\js\script.js" />
@@ -149,20 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BasvuruController.cs" />
-    <Compile Include="Controllers\FotografController.cs" />
+    <Compile Include="Controllers\HesapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IlanController.cs" />
-    <Compile Include="Controllers\IlceController.cs" />
-    <Compile Include="Controllers\IsArayanController.cs" />
-    <Compile Include="Controllers\IsDeneyimiController.cs" />
     <Compile Include="Controllers\IsVerenController.cs" />
-    <Compile Include="Controllers\MahalleController.cs" />
-    <Compile Include="Controllers\MeslekController.cs" />
-    <Compile Include="Controllers\PozisyonController.cs" />
-    <Compile Include="Controllers\SehirController.cs" />
-    <Compile Include="Controllers\SektorController.cs" />
-    <Compile Include="Controllers\SirketController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,6 +168,7 @@
     <Compile Include="Models\IsArayan.cs" />
     <Compile Include="Models\IsDeneyimi.cs" />
     <Compile Include="Models\IsVeren.cs" />
+    <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\MaasAraligi.cs" />
     <Compile Include="Models\Mahalle.cs" />
     <Compile Include="Models\Meslek.cs" />
@@ -185,6 +177,7 @@
     <Compile Include="Models\Sektor.cs" />
     <Compile Include="Models\Sirket.cs" />
     <Compile Include="Models\SureModel.cs" />
+    <Compile Include="Models\UyeGirisiModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -206,9 +199,12 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\FontAwesome.otf" />
-    <Content Include="Views\IsVeren\Index.cshtml" />
     <Content Include="Views\Home\TumIlanlar.cshtml" />
     <Content Include="Views\Home\Iletisim.cshtml" />
+    <Content Include="Views\Hesap\UyeGirisi.cshtml" />
+    <Content Include="Views\Hesap\YeniUyelik.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\IsVeren\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -218,18 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Basvuru\" />
-    <Folder Include="Views\Fotograf\" />
-    <Folder Include="Views\Ilan\" />
-    <Folder Include="Views\Ilce\" />
-    <Folder Include="Views\IsArayan\" />
-    <Folder Include="Views\IsDeneyimi\" />
-    <Folder Include="Views\Mahalle\" />
-    <Folder Include="Views\Meslek\" />
-    <Folder Include="Views\Pozisyon\" />
-    <Folder Include="Views\Sehir\" />
-    <Folder Include="Views\Sektor\" />
-    <Folder Include="Views\Sirket\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

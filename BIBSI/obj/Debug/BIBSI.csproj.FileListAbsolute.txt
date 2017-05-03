@@ -140,6 +140,6 @@ C:\Users\Fatih\Desktop\BIBSI\BIBSI\bin\System.Web.Webpages.Deployment.xml
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\bin\System.Web.Webpages.Razor.xml
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\bin\System.Web.Helpers.xml
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\bin\System.Web.Mvc.xml
-C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csprojResolveAssemblyReference.cache
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.dll
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.pdb
+C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csprojResolveAssemblyReference.cache
