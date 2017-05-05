@@ -15,7 +15,6 @@ namespace BIBSI.Controllers
         // GET: Ilce
         public ActionResult ListIlan()
         {
-            
             modell.ilanlar = dbContext.Ilanlar.ToList(); //Veri tabanına select işlemi attık 
             return View(modell.ilanlar);
         }

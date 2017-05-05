@@ -6,7 +6,7 @@ using System.Web;
 
 namespace BIBSI.ViewModels
 {
-    public class ModelViewer
+    public class ModelViewer : ViewModelBase
     {
         public List<IsVeren> isVeren { get; set; }
         public List<Kullanici> kullanici { get; set; }
@@ -23,5 +23,12 @@ namespace BIBSI.ViewModels
         public List<Fotograf> foto { get; set; }
         public List<Basvuru> basvurular { get; set; }
 
+        public ModelViewer()
+        {
+            using (Context db = new Context())
+            {
+                Sehirler = db.Sehirler.ToList();
+            }
+        }
     }
 }

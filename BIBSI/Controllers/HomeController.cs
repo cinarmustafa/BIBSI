@@ -1,4 +1,5 @@
 ﻿using BIBSI.Models;
+using BIBSI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,12 @@ namespace BIBSI.Controllers
 {
     public class HomeController : Controller
     {
+        ModelViewer model = new ModelViewer();
+
         // GET: Home
         public ActionResult Index()
         {
-            Context db = new Context();
-            return View(db.Basvurular.ToList());
-        }
-
-        public ActionResult TumIlanlar()
-        {
-            return View();
+            return View(model);
         }
 
         public ActionResult Iletisim()
