@@ -16,7 +16,7 @@ namespace BIBSI.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(modell);
         }
         public ActionResult ListIsVeren()
         {

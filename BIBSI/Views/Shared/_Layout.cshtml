@@ -34,15 +34,18 @@
                     <ul>
                         <li class="current_page_item"><a href="/">Anasayfa</a></li>
                         <li><a href="/IsVeren">İş Veren</a></li>
-                        <li><a href="/Home/TumIlanlar">Tüm İş İlanları</a></li>
+                        <li><a href="/Ilan/ListIlan">Tüm İş İlanları</a></li>
                         <li><a href="/Home/Iletisim">İletişim</a></li>
                         <li>
                             <input type="text" id="tbIsArama" placeholder="Pozisyon, firma adı, sektör" />
                             <select id="cmbxSehirler">
-                                @{ 
-                                    foreach (var item in Model.Sehirler)
+                                @{
+                                    if (Model.Sehirler != null)
                                     {
-                                        <option>@item.Ad</option>
+                                        foreach (var item in Model.Sehirler)
+                                        {
+                                            <option>@item.Ad</option>
+                                        }
                                     }
                                 }
                             </select>
@@ -65,13 +68,15 @@
                         <h2>İş Kategorileri</h2>
                     </div>
                     <ul class="style2">
-                        <li><a href="#">Uzman</a></li>
-                        <li><a href="#">Yönetici</a></li>
-                        <li><a href="#">Yeni Mezun</a></li>
-                        <li><a href="#">İşçi</a></li>
-                        <li><a href="#">Hizmet Personeli</a></li>
-                        <li><a href="#">Stajyer</a></li>
-                        <li><a href="#">Engelli</a></li>
+                        @{
+                            if (Model.Pozisyonlar != null)
+                            {
+                                foreach (var pozisyon in Model.Pozisyonlar)
+                                {
+                                    <li><a href="#">@pozisyon.Ad</a></li>
+                                }
+                            }
+                        }
                     </ul>
                 </div>
             </div>

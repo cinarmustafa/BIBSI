@@ -11,5 +11,6 @@ namespace BIBSI.ViewModels
     {
         Context db = new Context();
         public List<Sehir> Sehirler { get; set; }
+        public List<Pozisyon> Pozisyonlar { get; set; }
     }
 }
