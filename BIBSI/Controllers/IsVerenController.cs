@@ -1,143 +1,119 @@
-﻿using System;
+﻿using BIBSI.Models;
+using BIBSI.ViewModels;
+using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using BIBSI.Models;
 
 namespace BIBSI.Controllers
 {
     public class IsVerenController : Controller
     {
-        private Context db = new Context();
+        Context dbContext = new Context();
+        ModelViewer modell = new ModelViewer();
+        // GET: Ilce
 
-        // GET: IsVeren
         public ActionResult Index()
         {
             return View();
         }
-
-        // GET: IsVeren/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult ListIsVeren()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            IsVeren isVeren = db.IsVerenler.Find(id);
-            if (isVeren == null)
-            {
-                return HttpNotFound();
-            }
-            return View(isVeren);
+
+            modell.isVeren = dbContext.IsVerenler.ToList(); //Veri tabanına select işlemi attık 
+            return View(modell.isVeren);
         }
 
-        // GET: IsVeren/Create
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult InsertIsVeren(IsVeren isveren)
         {
-            ViewBag.FotografId = new SelectList(db.Fotograflar, "Id", "Url");
-            ViewBag.IlceId = new SelectList(db.Ilceler, "Id", "Ad");
-            ViewBag.MahalleId = new SelectList(db.Mahalleler, "Id", "MahalleAdi");
-            ViewBag.SehirId = new SelectList(db.Sehirler, "Id", "Ad");
+            dbContext.IsVerenler.Add(isveren);
+
+            dbContext.SaveChanges();
             return View();
         }
 
-        // POST: IsVeren/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        public ActionResult UpdateIsVeren(int? id)
+        {
+            IsVeren isveren = null;
+            if (id != null)
+            {
+                isveren = dbContext.IsVerenler.Where(x => x.Id == id).FirstOrDefault();
+            }
+            return View(isveren);
+        }
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Ad,Soyad,SehirId,IlceId,MahalleId,Adres,Telefon1,Telefon2,Email,WebAdresi,FotografId")] IsVeren isVeren)
+        public ActionResult UpdateIsVeren(IsVeren model)
         {
-            if (ModelState.IsValid)
-            {
-                db.IsVerenler.Add(isVeren);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            IsVeren isveren = dbContext.IsVerenler.Where(x => x.Id == model.Id).FirstOrDefault();
 
-            ViewBag.FotografId = new SelectList(db.Fotograflar, "Id", "Url", isVeren.FotografId);
-            ViewBag.IlceId = new SelectList(db.Ilceler, "Id", "Ad", isVeren.IlceId);
-            ViewBag.MahalleId = new SelectList(db.Mahalleler, "Id", "MahalleAdi", isVeren.MahalleId);
-            ViewBag.SehirId = new SelectList(db.Sehirler, "Id", "Ad", isVeren.SehirId);
-            return View(isVeren);
+
+
+            if (isveren != null)
+            {
+                isveren.Ad = model.Ad;
+                isveren.Soyad = model.Soyad;
+                isveren.SehirId = model.SehirId;
+                isveren.IlceId = model.SehirId;
+                isveren.MahalleId = model.MahalleId;
+                isveren.Adres = model.Adres;
+                isveren.Telefon1 = model.Telefon1;
+                isveren.Telefon2 = model.Telefon2;
+                isveren.Email = model.Email;
+                isveren.WebAdresi = model.WebAdresi;
+                isveren.FotografId = model.FotografId;
+
+
+
+
+                int sonuc = dbContext.SaveChanges();
+
+                if (sonuc > 0)
+                {
+                    ViewBag.Result = "Güncelleme işlemi başarılı.";
+                    ViewBag.Status = "success";
+
+                }
+
+                else
+                {
+                    ViewBag.Result = "Güncelleme işlemi başarısız.";
+                    ViewBag.Status = "danger";
+                }
+            }
+            return View(isveren);
         }
 
-        // GET: IsVeren/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult DeleteIsVeren(int? id)
         {
-            if (id == null)
+            IsVeren isveren = null;
+            if (id != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                isveren = dbContext.IsVerenler.Where(x => x.Id == id).FirstOrDefault();
             }
-            IsVeren isVeren = db.IsVerenler.Find(id);
-            if (isVeren == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.FotografId = new SelectList(db.Fotograflar, "Id", "Url", isVeren.FotografId);
-            ViewBag.IlceId = new SelectList(db.Ilceler, "Id", "Ad", isVeren.IlceId);
-            ViewBag.MahalleId = new SelectList(db.Mahalleler, "Id", "MahalleAdi", isVeren.MahalleId);
-            ViewBag.SehirId = new SelectList(db.Sehirler, "Id", "Ad", isVeren.SehirId);
-            return View(isVeren);
+
+            return View(isveren);
         }
 
-        // POST: IsVeren/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Ad,Soyad,SehirId,IlceId,MahalleId,Adres,Telefon1,Telefon2,Email,WebAdresi,FotografId")] IsVeren isVeren)
+
+        [HttpPost, ActionName("DeleteIsVeren")]
+        public ActionResult DeleteIsVerenn(int? id)
         {
-            if (ModelState.IsValid)
+
+            if (id != null)
             {
-                db.Entry(isVeren).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                IsVeren isveren = dbContext.IsVerenler.Where(x => x.Id == id).FirstOrDefault();
+
+                dbContext.IsVerenler.Remove(isveren);
+                dbContext.SaveChanges();
+
             }
-            ViewBag.FotografId = new SelectList(db.Fotograflar, "Id", "Url", isVeren.FotografId);
-            ViewBag.IlceId = new SelectList(db.Ilceler, "Id", "Ad", isVeren.IlceId);
-            ViewBag.MahalleId = new SelectList(db.Mahalleler, "Id", "MahalleAdi", isVeren.MahalleId);
-            ViewBag.SehirId = new SelectList(db.Sehirler, "Id", "Ad", isVeren.SehirId);
-            return View(isVeren);
+
+            return RedirectToAction("ListIsVeren", "IsVerenController");
         }
 
-        // GET: IsVeren/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            IsVeren isVeren = db.IsVerenler.Find(id);
-            if (isVeren == null)
-            {
-                return HttpNotFound();
-            }
-            return View(isVeren);
-        }
 
-        // POST: IsVeren/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            IsVeren isVeren = db.IsVerenler.Find(id);
-            db.IsVerenler.Remove(isVeren);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
     }
 }

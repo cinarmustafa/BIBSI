@@ -13,7 +13,7 @@ namespace BIBSI.Controllers
         public ActionResult Index()
         {
             Context db = new Context();
-            return View(db.IsArayanlar.ToList());
+            return View(db.Basvurular.ToList());
         }
 
         public ActionResult TumIlanlar()

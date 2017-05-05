@@ -22,7 +22,7 @@ namespace BIBSI.Models
         public Enums.EgitimDurumu EgitimDurumu { get; set; }
         public MaasAraligi MaasAraligi { get; set; }
         public IlanIsDeneyimi Deneyim { get; set; }
-        public Aralik<byte> YasAraligi { get; set; }
+        public YasAraligi YasAraligi { get; set; }
         public SureModel IlanSuresi { get; set; }
         public int IsciSayisi { get; set; }
         public DateTime EklenmeTarihi { get; set; }
