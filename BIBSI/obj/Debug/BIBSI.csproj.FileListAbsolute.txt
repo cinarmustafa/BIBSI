@@ -143,9 +143,19 @@ C:\Users\Mustafa\Desktop\BIBSI\BIBSI\bin\System.Web.Helpers.xml
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\bin\System.Web.Mvc.xml
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations.InitialCreate.resources
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations._552017.resources
+<<<<<<< HEAD
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csproj.GenerateResource.Cache
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.dll
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.pdb
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations._752017.resources
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations._7520172.resources
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csprojResolveAssemblyReference.cache
+=======
+<<<<<<< HEAD
+C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations.InitialCreate.resources
+C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations._552017.resources
+C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csproj.GenerateResource.Cache
+=======
+>>>>>>> 02c8454201ef89c9b25e168a9f1e80b9d16b58a5
+>>>>>>> 4f20a99d5877f7b5ca21694fc812caf5b576941d
