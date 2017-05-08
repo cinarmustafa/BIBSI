@@ -23,13 +23,9 @@ namespace BIBSI.ViewModels
         public List<Fotograf> foto { get; set; }
         public List<Basvuru> basvurular { get; set; }
 
-        public ModelViewer()
-        {
-            using (Context db = new Context())
-            {
-                Sehirler = db.Sehirler.ToList();
-                Pozisyonlar = db.Pozisyonlar.ToList();
-            }
-        }
+        public UyeGirisiModel UyeGirisModel { get; set; }
+        public Kullanici KullaniciModel { get; set; }
+
+        public ModelViewer() : base() { }
     }
 }

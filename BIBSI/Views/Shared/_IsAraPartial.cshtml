@@ -1,0 +1,11 @@
+﻿@model BIBSI.Models.IlanAraModel
+@{
+    var sehirler = ViewBag.Sehirler as List<BIBSI.Models.Sehir>;
+}
+@using (Html.BeginForm("IlanlariListele", "Home", FormMethod.Get))
+{
+    @Html.TextBoxFor(model => model.AramaCumlesi, new { @id = "tbIsArama", @placeholder = "Pozisyon, firma adı, sektör" })
+    @Html.DropDownListFor(model => model.SehirId, new SelectList(sehirler, "Id", "Ad"), "Şehir", new { @id = "cmbxSehirler" })
+    <input id="btnIsAra" type="submit" value="İş Ara" />
+}
+

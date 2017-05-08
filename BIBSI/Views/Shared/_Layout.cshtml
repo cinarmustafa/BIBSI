@@ -1,6 +1,4 @@
-﻿@model BIBSI.ViewModels.ModelViewer
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -30,26 +28,14 @@
         </div>
         <div id="menu-wrapper">
             <div id="menu" class="container">
-                <form action="" method="post">
+                <form action="IlanlariListele" method="get">
                     <ul>
                         <li class="current_page_item"><a href="/">Anasayfa</a></li>
                         <li><a href="/IsVeren">İş Veren</a></li>
                         <li><a href="/Ilan/ListIlan">Tüm İş İlanları</a></li>
                         <li><a href="/Home/Iletisim">İletişim</a></li>
                         <li>
-                            <input type="text" id="tbIsArama" placeholder="Pozisyon, firma adı, sektör" />
-                            <select id="cmbxSehirler">
-                                @{
-                                    if (Model.Sehirler != null)
-                                    {
-                                        foreach (var item in Model.Sehirler)
-                                        {
-                                            <option>@item.Ad</option>
-                                        }
-                                    }
-                                }
-                            </select>
-                            <input id="btnIsAra" type="submit" value="İş Ara" />
+                            @Html.Partial("~/Views/Shared/_IsAraPartial.cshtml", ViewData)
                         </li>
 
                     </ul>
@@ -69,9 +55,10 @@
                     </div>
                     <ul class="style2">
                         @{
-                            if (Model.Pozisyonlar != null)
+                            var pozisyonlar = ViewBag.Pozisyonlar as List<BIBSI.Models.Pozisyon>;
+                            if (pozisyonlar != null)
                             {
-                                foreach (var pozisyon in Model.Pozisyonlar)
+                                foreach (var pozisyon in pozisyonlar)
                                 {
                                     <li><a href="#">@pozisyon.Ad</a></li>
                                 }

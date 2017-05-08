@@ -1,0 +1,21 @@
+﻿@model IEnumerable<BIBSI.Models.Ilan>
+
+@{
+    ViewBag.Title = "IlanlariListele";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Arama sonuçları</h2>
+
+<div id="ilanAramaSonuclari">
+    @{
+        foreach (var ilan in Model)
+        {
+            <div class="ilan">
+                <h2>@ilan.IsTanimi</h2>
+                @Html.ActionLink("Başvur","BasvuruYap","Basvuru")
+            </div>
+        }
+    }
+</div>
+

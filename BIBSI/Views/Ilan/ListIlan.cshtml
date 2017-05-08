@@ -1,4 +1,4 @@
-﻿@model BIBSI.ViewModels.ModelViewer
+﻿@model List<BIBSI.Models.Ilan>
 
 @{
     ViewBag.Title = "ListIlan";
@@ -9,7 +9,7 @@
 
 <div id="tumIlanlar">
     @{
-        foreach (var ilan in Model.ilanlar)
+        foreach (var ilan in Model)
         {
             <div class="ilan">
                 <h2>@ilan.IsTanimi</h2>

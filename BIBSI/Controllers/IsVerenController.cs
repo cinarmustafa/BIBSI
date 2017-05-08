@@ -11,25 +11,24 @@ namespace BIBSI.Controllers
     public class IsVerenController : Controller
     {
         Context dbContext = new Context();
-        ModelViewer modell = new ModelViewer();
+        ModelViewer modelViewer = new ModelViewer();
         // GET: Ilce
 
         public ActionResult Index()
         {
-            return View(modell);
+            ViewBag.Sehirler = modelViewer.Sehirler;
+            return View();
         }
         public ActionResult ListIsVeren()
         {
-
-            modell.isVeren = dbContext.IsVerenler.ToList(); //Veri tabanına select işlemi attık 
-            return View(modell.isVeren);
+            var liste = dbContext.IsVerenler.ToList(); //Veri tabanına select işlemi attık 
+            return View(liste);
         }
 
         [HttpPost]
         public ActionResult InsertIsVeren(IsVeren isveren)
         {
             dbContext.IsVerenler.Add(isveren);
-
             dbContext.SaveChanges();
             return View();
         }
@@ -48,9 +47,6 @@ namespace BIBSI.Controllers
         public ActionResult UpdateIsVeren(IsVeren model)
         {
             IsVeren isveren = dbContext.IsVerenler.Where(x => x.Id == model.Id).FirstOrDefault();
-
-
-
             if (isveren != null)
             {
                 isveren.Ad = model.Ad;
@@ -65,18 +61,13 @@ namespace BIBSI.Controllers
                 isveren.WebAdresi = model.WebAdresi;
                 isveren.FotografId = model.FotografId;
 
-
-
-
                 int sonuc = dbContext.SaveChanges();
 
                 if (sonuc > 0)
                 {
                     ViewBag.Result = "Güncelleme işlemi başarılı.";
                     ViewBag.Status = "success";
-
                 }
-
                 else
                 {
                     ViewBag.Result = "Güncelleme işlemi başarısız.";
@@ -97,23 +88,16 @@ namespace BIBSI.Controllers
             return View(isveren);
         }
 
-
         [HttpPost, ActionName("DeleteIsVeren")]
         public ActionResult DeleteIsVerenn(int? id)
         {
-
             if (id != null)
             {
                 IsVeren isveren = dbContext.IsVerenler.Where(x => x.Id == id).FirstOrDefault();
-
                 dbContext.IsVerenler.Remove(isveren);
                 dbContext.SaveChanges();
-
             }
-
             return RedirectToAction("ListIsVeren", "IsVerenController");
         }
-
-
     }
 }

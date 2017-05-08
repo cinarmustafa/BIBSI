@@ -14,6 +14,10 @@ namespace BIBSI.Models
         public int SektorId { get; set; }
         public int PozisyonId { get; set; }
         public int MeslekId { get; set; }
+        public int SehirId { get; set; }
+        public int IlceId { get; set; }
+        public int MahalleId { get; set; }
+        public string Adres { get; set; }
         public Enums.CinsiyetTur Cinsiyet { get; set; }
         public Enums.AskerlikDurumuTur AskerlikDurumu { get; set; }
         public bool YolMasrafi { get; set; }
@@ -41,6 +45,9 @@ namespace BIBSI.Models
         public virtual Sektor Sektor { get; set; }
         public virtual Pozisyon Pozisyon { get; set; }
         public virtual Meslek Meslek { get; set; }
+        public virtual Sehir Sehir { get; set; }
+        public virtual Ilce Ilce { get; set; }
+        public virtual Mahalle Mahalle { get; set; }
         public virtual ICollection<Fotograf> Fotograflar { get; set; }
     }
 }

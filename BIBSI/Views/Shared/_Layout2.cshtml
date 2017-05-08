@@ -1,5 +1,4 @@
-﻿@model BIBSI.ViewModels.ModelViewer
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -29,30 +28,15 @@
         </div>
         <div id="menu-wrapper">
             <div id="menu" class="container">
-                <form action="" method="post">
-                    <ul>
-                        <li class="current_page_item"><a href="/">Anasayfa</a></li>
-                        <li><a href="/IsVeren">İş Veren</a></li>
-                        <li><a href="/Ilan/ListIlan">Tüm İş İlanları</a></li>
-                        <li><a href="/Home/Iletisim">İletişim</a></li>
-                        <li>
-                            <input type="text" id="tbIsArama" placeholder="Pozisyon, firma adı, sektör" />
-                            <select id="cmbxSehirler">
-                                @{
-                                    if (Model.Sehirler != null)
-                                    {
-                                        foreach (var item in Model.Sehirler)
-                                        {
-                                            <option>@item.Ad</option>
-                                        }
-                                    }
-                                }
-                            </select>
-                            <input id="btnIsAra" type="submit" value="İş Ara" />
-                        </li>
-
-                    </ul>
-                </form>
+                <ul>
+                    <li class="current_page_item"><a href="/">Anasayfa</a></li>
+                    <li><a href="/IsVeren">İş Veren</a></li>
+                    <li><a href="/Ilan/ListIlan">Tüm İş İlanları</a></li>
+                    <li><a href="/Home/Iletisim">İletişim</a></li>
+                    <li>
+                        @Html.Partial("~/Views/Shared/_IsAraPartial.cshtml", ViewData)
+                    </li>
+                </ul>
             </div>
             <!-- end #menu -->
         </div>

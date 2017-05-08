@@ -11,12 +11,13 @@ namespace BIBSI.Controllers
     public class IlanController : Controller
     {
         Context dbContext = new Context();
-        ModelViewer modell = new ModelViewer();
+        ModelViewer modelViewer = new ModelViewer();
         // GET: Ilce
         public ActionResult ListIlan()
         {
-            modell.ilanlar = dbContext.Ilanlar.ToList(); //Veri tabanına select işlemi attık 
-            return View(modell);
+            ViewBag.Sehirler = modelViewer.Sehirler;
+            var liste = dbContext.Ilanlar.ToList(); //Veri tabanına select işlemi attık 
+            return View(liste);
         }
 
         [HttpPost]

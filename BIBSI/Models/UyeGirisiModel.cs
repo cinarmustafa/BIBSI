@@ -15,12 +15,6 @@ namespace BIBSI.Models
         [Display(Name = "Beni Hatırla")]
         public bool BeniHatirla { get; set; }
 
-        public UyeGirisiModel()
-        {
-            using (Context db = new Context())
-            {
-                Sehirler = db.Sehirler.ToList();
-            }
-        }
+        public UyeGirisiModel() { }
     }
 }

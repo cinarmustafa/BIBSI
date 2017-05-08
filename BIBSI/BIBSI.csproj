@@ -178,13 +178,23 @@
     <Compile Include="Migrations\201705051236486_5-5-2017.Designer.cs">
       <DependentUpon>201705051236486_5-5-2017.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705071841159_7-5-2017.cs" />
+    <Compile Include="Migrations\201705071841159_7-5-2017.Designer.cs">
+      <DependentUpon>201705071841159_7-5-2017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705071842546_7-5-2017--2.cs" />
+    <Compile Include="Migrations\201705071842546_7-5-2017--2.Designer.cs">
+      <DependentUpon>201705071842546_7-5-2017--2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AdresModel.cs" />
     <Compile Include="Models\Aralik.cs" />
     <Compile Include="Models\Basvuru.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\Fotograf.cs" />
     <Compile Include="Models\Ilan.cs" />
+    <Compile Include="Models\IlanAraModel.cs" />
     <Compile Include="Models\IlanIsDeneyimi.cs" />
     <Compile Include="Models\Ilce.cs" />
     <Compile Include="Models\IsArayan.cs" />
@@ -230,6 +240,8 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\IsVeren\Index.cshtml" />
     <Content Include="Views\Ilan\ListIlan.cshtml" />
+    <Content Include="Views\Home\IlanlariListele.cshtml" />
+    <Content Include="Views\Shared\_IsAraPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -246,6 +258,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705051236486_5-5-2017.resx">
       <DependentUpon>201705051236486_5-5-2017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705071841159_7-5-2017.resx">
+      <DependentUpon>201705071841159_7-5-2017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705071842546_7-5-2017--2.resx">
+      <DependentUpon>201705071842546_7-5-2017--2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
