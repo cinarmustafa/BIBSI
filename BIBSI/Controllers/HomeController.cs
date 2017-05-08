@@ -20,7 +20,7 @@ namespace BIBSI.Controllers
 
         public ActionResult Iletisim()
         {
-            return View();
+            return View(model);
         }
     }
 }

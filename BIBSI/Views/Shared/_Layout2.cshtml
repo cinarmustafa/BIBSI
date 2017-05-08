@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model BIBSI.ViewModels.ModelViewer
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -32,17 +33,20 @@
                     <ul>
                         <li class="current_page_item"><a href="/">Anasayfa</a></li>
                         <li><a href="/IsVeren">İş Veren</a></li>
-                        <li><a href="/Home/TumIlanlar">Tüm İş İlanları</a></li>
+                        <li><a href="/Ilan/ListIlan">Tüm İş İlanları</a></li>
                         <li><a href="/Home/Iletisim">İletişim</a></li>
                         <li>
                             <input type="text" id="tbIsArama" placeholder="Pozisyon, firma adı, sektör" />
                             <select id="cmbxSehirler">
-                                <option>Ankara</option>
-                                <option>İstanbul</option>
-                                <option>Adana</option>
-                                <option>Trabzon</option>
-                                <option>Ankara</option>
-                                <option>Ankara</option>
+                                @{
+                                    if (Model.Sehirler != null)
+                                    {
+                                        foreach (var item in Model.Sehirler)
+                                        {
+                                            <option>@item.Ad</option>
+                                        }
+                                    }
+                                }
                             </select>
                             <input id="btnIsAra" type="submit" value="İş Ara" />
                         </li>

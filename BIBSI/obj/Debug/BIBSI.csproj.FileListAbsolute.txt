@@ -146,7 +146,10 @@ C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csprojResolveAssemblyReferenc
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations.InitialCreate.resources
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csproj.GenerateResource.Cache
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations._552017.resources
+<<<<<<< HEAD
 C:\Users\Mustafa\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csprojResolveAssemblyReference.cache
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations.InitialCreate.resources
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.Migrations._552017.resources
 C:\Users\Fatih\Desktop\BIBSI\BIBSI\obj\Debug\BIBSI.csproj.GenerateResource.Cache
+=======
+>>>>>>> 02c8454201ef89c9b25e168a9f1e80b9d16b58a5

@@ -28,6 +28,7 @@ namespace BIBSI.ViewModels
             using (Context db = new Context())
             {
                 Sehirler = db.Sehirler.ToList();
+                Pozisyonlar = db.Pozisyonlar.ToList();
             }
         }
     }
